@@ -12,7 +12,10 @@ const codes = [
 ];
 
 
-  function onKeyDownHandler(e) { 
+function init() {
+  let index = 0;
+  document.body.addEventListener("keydown", (e) => {
+   
      const key = e.key;
      
       index = (key === codes[index]) ? ++index : 0;
@@ -21,9 +24,5 @@ const codes = [
             window.alert("Hurray!");
               index = 0; 
      }
-   }
-function init() {
-  let index = 0;
-  document.body.addEventListener("keydown", onKeyDownHandler() );
+  });
 }
-
