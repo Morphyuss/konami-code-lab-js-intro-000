@@ -19,7 +19,7 @@ function init() {
    function onKeyDownHandler(e) {
      const key = e.key;
      
-      index = (key === codes[index]) ? index++ : 0;
+      index = (key === codes[index]) ? ++index : 0;
       
          if (index === codes.length) {
             window.alert("Hurray!");
